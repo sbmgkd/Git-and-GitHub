@@ -1,7 +1,5 @@
 # Git and GitHub Repository
 
----
-
 ## Overview
 
 **Git** is a distributed version control system that tracks changes to files in a repository.
@@ -21,6 +19,7 @@
 * `~` — often used to mean the home/root folder (context dependent).
 * `origin` — default name for the remote repository that you cloned from or added.
 * `main` / `master` — common default branch names (GitHub uses `main` by default nowadays).
+* `.gitignore` — the .gitignore file is a plain text file that tells Git which files and directories to ignore in a project, meaning they will not be tracked, staged, or committed to the repository.
 
 Status flags you may see in `git status` output:
 
@@ -284,7 +283,7 @@ rm -rf .git
 
 ---
 
-## Diagrams (copy/paste-friendly)
+## Diagrams
 
 ### Workflow (Mermaid)
 
@@ -293,10 +292,12 @@ flowchart LR
   subgraph Remote
     GH[GitHub Repo]
   end
+
   subgraph Local
     W[Working Directory] --> S[Staging Area]
     S --> C[Local Commit (git commit)]
   end
+
   GH <-->|git push| C
   GH -->|git clone / git pull| W
 ```
