@@ -289,17 +289,17 @@ rm -rf .git
 
 ```mermaid
 flowchart LR
-  subgraph Remote
-    GH[GitHub Repo]
-  end
+  subgraph Remote
+    GH[GitHub Repo]
+  end
 
-  subgraph Local
-    W[Working Directory] --> S[Staging Area]
-    S --> C[Local Commit (git commit)]
-  end
+  subgraph Local
+    W[Working Directory] --> S[Staging Area]
+    S --> C(Local Commit (git commit)) 
+  end
 
-  GH <-->|git push| C
-  GH -->|git clone / git pull| W
+  GH <-->|git push| C
+  GH -->|git clone / git pull| W
 ```
 
 ### Merge Conflict Flow
